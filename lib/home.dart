@@ -26,15 +26,15 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(mytext),
-              ElevatedButton(
-                onPressed: _changeText,
-                child: const Text(
-                  "click",
-                  style: TextStyle(fontSize: 15.0),
-                ),
-                style: ElevatedButton.styleFrom(primary: Colors.green),
-              ),
+              Text(mytext, style: const TextStyle(fontSize: 20.0)),
+              // ElevatedButton(
+              //   onPressed: _changeText,
+              //   child: const Text(
+              //     "click",
+              //     style: TextStyle(fontSize: 15.0),
+              //   ),
+              //   style: ElevatedButton.styleFrom(primary: Colors.green),
+              // ),
             ],
           ),
         ));
@@ -47,6 +47,10 @@ class _HomePageState extends State<HomePage> {
         title: const Text("Mero Pashal"),
       ),
       body: _bodyWidget(),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: _changeText,
+      ),
     );
   }
 }
