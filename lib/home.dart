@@ -8,15 +8,45 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String mytext = "Hello";
+  void _changeText() {
+    setState(() {
+      if (mytext.startsWith("H")) {
+        mytext = "Welcome to my app";
+      } else {
+        mytext = "Hello world";
+      }
+    });
+  }
+
+  Widget _bodyWidget() {
+    return Container(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(mytext),
+              ElevatedButton(
+                onPressed: _changeText,
+                child: const Text(
+                  "click",
+                  style: TextStyle(fontSize: 15.0),
+                ),
+                style: ElevatedButton.styleFrom(primary: Colors.green),
+              ),
+            ],
+          ),
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Mero Pashal"),
+        title: const Text("Mero Pashal"),
       ),
-      drawer: Drawer(
-        child: ListView(),
-      ),
+      body: _bodyWidget(),
     );
   }
 }

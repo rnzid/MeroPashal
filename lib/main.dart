@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mero_pashal/home.dart';
+import 'home.dart';
 
 void main() => runApp(const MyApp());
 
