@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'Login.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,11 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: LoginPage(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
             primarySwatch: Colors.green,
-            brightness: Brightness.dark,
+            brightness: Brightness.light,
             accentColor: Colors.red),
       ),
     );
