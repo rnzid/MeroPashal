@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: _bodyWidget(),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: _changeText,
       ),
     );
